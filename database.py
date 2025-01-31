@@ -1,7 +1,11 @@
 import sqlite3
 
+def conectar():
+    return sqlite3.connect("ordico.db")
+
+# ---- Creación de tablas ----
 def crear_tablas():
-    conn = sqlite3.connect('ordico.db')
+    conn = conectar()
     cursor = conn.cursor()
     
     cursor.execute('''
@@ -35,13 +39,6 @@ def crear_tablas():
     
     conn.commit()
     conn.close()
-
-# Ejecutar al inicio para crear tablas
-crear_tablas()
-import sqlite3
-
-def conectar():
-    return sqlite3.connect('ordico.db')
 
 # ---- Funciones para Productos ----
 def agregar_producto(nombre, descripcion, precio, stock):
@@ -88,3 +85,17 @@ def agregar_detalle_venta(id_venta, id_producto, cantidad):
     ''', (id_venta, id_producto, cantidad))
     conn.commit()
     conn.close()
+
+def actualizar_stock(id_producto, cantidad):
+    conn = conectar()
+    cursor = conn.cursor()
+    cursor.execute('''
+        UPDATE productos 
+        SET stock = stock + ? 
+        WHERE id = ?
+    ''', (cantidad, id_producto))
+    conn.commit()
+    conn.close()
+
+# Crear tablas al importar el módulo (opcional, pero recomendado solo una vez)
+crear_tablas()
