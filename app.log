@@ -1,0 +1,31 @@
+2025-02-04 18:34:19,183 INFO:Migración de la tabla 'usuarios' completada con éxito.
+2025-02-04 18:34:19,192 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-04 18:34:19,194 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:34:19,194 INFO:El usuario administrador ya existe.
+2025-02-04 18:35:16,292 INFO:Usuario 'Federico' creado exitosamente.
+2025-02-04 18:35:24,887 ERROR:Error al crear usuario 'federico': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:36:34,991 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-04 18:36:34,993 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-04 18:36:35,001 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:36:35,001 INFO:El usuario administrador ya existe.
+2025-02-04 18:38:11,247 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-04 18:38:11,250 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-04 18:38:11,250 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:38:11,250 INFO:El usuario administrador ya existe.
+2025-02-04 18:38:41,915 INFO:Usuario 'Maria' creado exitosamente.
+2025-02-04 18:43:59,053 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-04 18:43:59,054 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-04 18:43:59,055 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:43:59,055 INFO:El usuario administrador ya existe.
+2025-02-04 18:44:40,852 INFO:Usuario 'Fedemusa' creado exitosamente.
+2025-02-04 18:45:28,078 ERROR:Error al crear usuario 'federico': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:46:53,335 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-04 18:46:53,336 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-04 18:46:53,337 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:46:53,337 INFO:El usuario administrador ya existe.
+2025-02-04 18:47:34,557 INFO:Producto con ID 4 eliminado.
+2025-02-04 18:50:07,089 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-04 18:50:07,090 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-04 18:50:07,091 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-04 18:50:07,091 INFO:El usuario administrador ya existe.
+2025-02-04 18:50:39,154 INFO:Usuario 'Mariaperez' creado exitosamente.
