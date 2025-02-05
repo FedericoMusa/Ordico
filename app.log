@@ -172,3 +172,53 @@
 2025-02-05 18:50:07,576 INFO:Usuario predeterminado 'cajero' creado exitosamente.
 2025-02-05 18:50:07,864 INFO:Usuario 'operador' creado exitosamente.
 2025-02-05 18:50:07,864 INFO:Usuario predeterminado 'operador' creado exitosamente.
+2025-02-05 19:04:45,583 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-05 19:04:45,583 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-05 19:04:45,583 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:04:45,583 INFO:El usuario predeterminado 'admin' ya existe.
+2025-02-05 19:04:45,583 ERROR:Error al crear usuario 'cajero': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:04:45,583 INFO:El usuario predeterminado 'cajero' ya existe.
+2025-02-05 19:04:45,583 ERROR:Error al crear usuario 'operador': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:04:45,583 INFO:El usuario predeterminado 'operador' ya existe.
+2025-02-05 19:05:16,128 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-05 19:05:16,128 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-05 19:05:16,129 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:05:16,129 INFO:El usuario predeterminado 'admin' ya existe.
+2025-02-05 19:05:16,419 INFO:Usuario 'cajero' creado exitosamente.
+2025-02-05 19:05:16,419 INFO:Usuario predeterminado 'cajero' creado exitosamente.
+2025-02-05 19:05:16,714 INFO:Usuario 'operador' creado exitosamente.
+2025-02-05 19:05:16,714 INFO:Usuario predeterminado 'operador' creado exitosamente.
+2025-02-05 19:06:28,484 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-05 19:06:28,485 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-05 19:06:28,486 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:06:28,486 INFO:El usuario predeterminado 'admin' ya existe.
+2025-02-05 19:06:28,487 ERROR:Error al crear usuario 'cajero': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:06:28,487 INFO:El usuario predeterminado 'cajero' ya existe.
+2025-02-05 19:06:28,488 ERROR:Error al crear usuario 'operador': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:06:28,489 INFO:El usuario predeterminado 'operador' ya existe.
+2025-02-05 19:07:04,273 INFO:Usuario 'federico' creado exitosamente.
+2025-02-05 19:07:37,211 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-05 19:07:37,212 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-05 19:07:37,213 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:07:37,213 INFO:El usuario predeterminado 'admin' ya existe.
+2025-02-05 19:07:37,214 ERROR:Error al crear usuario 'cajero': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:07:37,214 INFO:El usuario predeterminado 'cajero' ya existe.
+2025-02-05 19:07:37,215 ERROR:Error al crear usuario 'operador': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:07:37,215 INFO:El usuario predeterminado 'operador' ya existe.
+2025-02-05 19:11:00,285 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-05 19:11:00,286 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-05 19:11:00,287 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:11:00,287 INFO:El usuario predeterminado 'admin' ya existe.
+2025-02-05 19:11:00,288 ERROR:Error al crear usuario 'cajero': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:11:00,288 INFO:El usuario predeterminado 'cajero' ya existe.
+2025-02-05 19:11:00,289 ERROR:Error al crear usuario 'operador': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:11:00,289 INFO:El usuario predeterminado 'operador' ya existe.
+2025-02-05 19:11:25,157 INFO:La columna 'email' ya existe en la tabla 'usuarios'. No es necesaria la migración.
+2025-02-05 19:11:25,158 INFO:Las tablas fueron creadas o actualizadas exitosamente.
+2025-02-05 19:11:25,159 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:11:25,159 INFO:El usuario predeterminado 'admin' ya existe.
+2025-02-05 19:11:25,160 ERROR:Error al crear usuario 'cajero': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:11:25,160 INFO:El usuario predeterminado 'cajero' ya existe.
+2025-02-05 19:11:25,161 ERROR:Error al crear usuario 'operador': El nombre de usuario o correo electrónico ya existen
+2025-02-05 19:11:25,161 INFO:El usuario predeterminado 'operador' ya existe.
+2025-02-05 19:12:17,875 ERROR:Error al crear usuario 'admin': El nombre de usuario o correo electrónico ya existen

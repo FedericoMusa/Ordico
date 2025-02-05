@@ -228,6 +228,24 @@ def actualizar_email_usuario(usuario_id, nuevo_email):
             logging.error(f"Error al actualizar email del usuario {usuario_id}: {e}")
             raise e
 
+def obtener_rol_usuario(username):
+    """Obtiene el rol del usuario a partir del nombre de usuario"""
+    with conectar() as conn:
+        cursor = conn.cursor()
+        cursor.execute('SELECT rol FROM usuarios WHERE username = ?', (username,))
+        row = cursor.fetchone()
+        if row:
+            return row['rol']
+        return None
+
+def es_admin(username):
+    """Verifica si el usuario tiene rol de administrador (gerente)"""
+    return obtener_rol_usuario(username) == 'gerente'
+
+def es_cajero(username):
+    """Verifica si el usuario tiene rol de cajero"""
+    return obtener_rol_usuario(username) == 'cajero'
+
 # --------------------------------------------------
 # Funciones para Productos
 # --------------------------------------------------
@@ -362,4 +380,4 @@ for username, password, email, rol in usuarios_predeterminados:
         crear_usuario(username, password, email, rol)
         logging.info(f"Usuario predeterminado '{username}' creado exitosamente.")
     except ValueError:
-        logging.info(f"El usuario predeterminado '{username}' ya existe.")
+        logging.info(f"El usuario predeterminado '{username}' ya existe.") 
