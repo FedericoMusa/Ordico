@@ -12,6 +12,22 @@ def conectar():
     conn.row_factory = sqlite3.Row  # Permite acceder a columnas por nombre
     return conn
 
+def obtener_todos_los_usuarios():
+    with conectar() as conn:
+        cursor = conn.cursor()
+        cursor.execute('SELECT * FROM usuarios')
+        return cursor.fetchall()
+
+def actualizar_rol_usuario(usuario_id, nuevo_rol):
+    with conectar() as conn:
+        cursor = conn.cursor()
+        cursor.execute('''
+            UPDATE usuarios
+            SET rol = ?
+            WHERE id = ?
+        ''', (nuevo_rol, usuario_id))
+        conn.commit()
+
 def crear_tablas():
     with conectar() as conn:
         cursor = conn.cursor()
@@ -334,9 +350,16 @@ def obtener_detalle_venta(id_venta):
 
 crear_tablas()
 
-# Crear usuario admin por defecto (solo si no existe)
-try:
-    crear_usuario("admin", "admin123", "admin@example.com", rol="gerente")
-    logging.info("Usuario administrador creado exitosamente.")
-except ValueError:
-    logging.info("El usuario administrador ya existe.")
+# Crear usuarios predeterminados (solo si no existen)
+usuarios_predeterminados = [
+    ("admin", "admin123", "admin@example.com", "gerente"),
+    ("cajero", "cajero123", "cajero@example.com", "cajero"),
+    ("operador", "operador123", "operador@example.com", "deposito")
+]
+
+for username, password, email, rol in usuarios_predeterminados:
+    try:
+        crear_usuario(username, password, email, rol)
+        logging.info(f"Usuario predeterminado '{username}' creado exitosamente.")
+    except ValueError:
+        logging.info(f"El usuario predeterminado '{username}' ya existe.")

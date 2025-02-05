@@ -1,9 +1,5 @@
 import sys
-from PyQt5.QtWidgets import (
-    QApplication, QMainWindow, QWidget, QVBoxLayout, 
-    QPushButton, QLabel, QMessageBox, QDialog, 
-    QLineEdit, QGridLayout
-)
+from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton, QLabel, QMessageBox, QDialog, QLineEdit, QGridLayout
 from PyQt5.QtCore import Qt
 
 # Importar las ventanas personalizadas
@@ -72,7 +68,7 @@ class MainApp(QMainWindow):
     def __init__(self, usuario):
         super().__init__()
         self.usuario = usuario
-        self.setWindowTitle(f"ORDICO - Bienvenido {usuario[1]}")
+        self.setWindowTitle(f"ORDICO - Bienvenido {usuario['username']}")
         self.setMinimumSize(400, 300)
         self.init_ui()
         
@@ -81,7 +77,7 @@ class MainApp(QMainWindow):
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
         
-        lbl_bienvenida = QLabel(f"Rol: {self.usuario[4].capitalize()}")
+        lbl_bienvenida = QLabel(f"Rol: {self.usuario['rol'].capitalize()}")
         lbl_bienvenida.setAlignment(Qt.AlignCenter)
         
         # Botones según rol
@@ -91,11 +87,15 @@ class MainApp(QMainWindow):
         btn_salir = QPushButton("Salir")
         
         # Configurar visibilidad por rol
-        if self.usuario[4] == 'deposito':
+        if self.usuario['rol'] == 'deposito':
             self.btn_ventas.setVisible(False)
             self.btn_reportes.setVisible(False)
-        elif self.usuario[4] == 'cajero':
+        elif self.usuario['rol'] == 'cajero':
             self.btn_stock.setVisible(False)
+            self.btn_reportes.setVisible(False)
+        elif self.usuario['rol'] == 'usuario':
+            self.btn_stock.setVisible(False)
+            self.btn_ventas.setVisible(False)
             self.btn_reportes.setVisible(False)
         
         # Conexiones
@@ -119,7 +119,7 @@ class MainApp(QMainWindow):
         self.stock_window.show()
 
     def abrir_ventas(self):
-        self.ventas_window = VentanaVentas(cajero_id=self.usuario[0])
+        self.ventas_window = VentanaVentas(cajero_id=self.usuario['id'])
         self.ventas_window.show()
 
     def abrir_reportes(self):
