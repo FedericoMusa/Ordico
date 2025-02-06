@@ -1,13 +1,10 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton, QLabel, QMessageBox, QDialog, QLineEdit, QGridLayout
+from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QWidget, QVBoxLayout, QGridLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt5.QtCore import Qt
-
-# Importar las ventanas personalizadas
+from PyQt5.QtGui import QPixmap
+from gui.main_window import MainApp
 from gui.registro import RegisterWindow
-from gui.ventas import VentanaVentas
-from gui.stock import StockWindow
-
-# Importar funciones de base de datos
+from gui.bienvenido import BienvenidoWindow
 from core.database import verificar_login, obtener_usuario_por_username
 
 # ----------------------------------------------------------
@@ -69,13 +66,19 @@ class MainApp(QMainWindow):
         super().__init__()
         self.usuario = usuario
         self.setWindowTitle(f"ORDICO - Bienvenido {usuario['username']}")
-        self.setMinimumSize(400, 300)
+        self.setMinimumSize(800, 600)
         self.init_ui()
         
     def init_ui(self):
         central_widget = QWidget()
         self.setCentralWidget(central_widget)
         layout = QVBoxLayout(central_widget)
+        
+        # Logo del local
+        logo = QLabel(self)
+        pixmap = QPixmap("assets/logo.png")
+        logo.setPixmap(pixmap)
+        logo.setAlignment(Qt.AlignCenter)
         
         lbl_bienvenida = QLabel(f"Rol: {self.usuario['rol'].capitalize()}")
         lbl_bienvenida.setAlignment(Qt.AlignCenter)
@@ -107,7 +110,8 @@ class MainApp(QMainWindow):
         # Estilos
         for btn in [self.btn_stock, self.btn_ventas, self.btn_reportes]:
             btn.setStyleSheet("padding: 15px; font-size: 14px;")
-            
+        
+        layout.addWidget(logo)
         layout.addWidget(lbl_bienvenida)
         layout.addWidget(self.btn_stock)
         layout.addWidget(self.btn_ventas)
@@ -133,8 +137,10 @@ if __name__ == "__main__":
     
     login = LoginWindow()
     if login.exec_() == QDialog.Accepted:
-        main_window = MainApp(login.usuario)
-        main_window.show()
+        bienvenido_window = BienvenidoWindow(login.usuario)
+        if bienvenido_window.exec_() == QDialog.Accepted:
+            main_window = MainApp(login.usuario)
+            main_window.show()
         sys.exit(app.exec_())
     else:
         sys.exit()
