@@ -2,8 +2,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow, QWidget, QVBoxLayout, QGridLayout, QLabel, QLineEdit, QPushButton, QMessageBox
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
+from register_window import RegisterWindow
 from gui.main_window import MainApp
-from gui.registro import RegisterWindow
 from gui.bienvenido import BienvenidoWindow
 from core.database import verificar_login, obtener_usuario_por_username
 
@@ -93,7 +93,7 @@ class MainApp(QMainWindow):
         if self.usuario['rol'] == 'deposito':
             self.btn_ventas.setVisible(False)
             self.btn_reportes.setVisible(False)
-        elif self.usuario['rol'] == 'cajero':
+        elif suario['rol'] == 'cajero':
             self.btn_stock.setVisible(False)
             self.btn_reportes.setVisible(False)
         elif self.usuario['rol'] == 'usuario':
